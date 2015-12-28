@@ -89,7 +89,7 @@ $(document).ready(function()
     basesize = $userimage.width(),
     size = getBackgroundSize($userimage.css('background-size')),
     position = getBackgroundPosition($userimage.css('background-position')),
-    scale = basesize/500;
+    scale = basesize/600;
 
     var
     template = $('input[name=template]:checked').val(),
@@ -114,7 +114,7 @@ $(window).konami({
     $('#formbuttons,.template-label').delay(400).animate({'opacity':'0'},2600)
     $('#settings').delay(1000).animate({'opacity':'0'},2000)
     $('.left-bottom-corner').delay(800).animate({'opacity':'0'},2200)
-    $('.preview').animate({'top':'-500px','opacity':'0.5'},3000).animate({'width':'0','opacity':'0'},3000,function(){
+    $('.preview').animate({'top':'-600px','opacity':'0.5'},3000).animate({'width':'0','opacity':'0'},3000,function(){
       $('#content').slideUp();
     })
   }
@@ -128,15 +128,15 @@ function createImage(template,source,x,y,w,h){
   userimage.src = source;
 
   var resize_canvas = document.getElementById("result");
-  resize_canvas.width = 500;
-  resize_canvas.height = 500;
+  resize_canvas.width = 600;
+  resize_canvas.height = 600;
 
   var ctx = resize_canvas.getContext("2d");
-  ctx.rect(0,0,500,500);
+  ctx.rect(0,0,600,600);
   ctx.fillStyle="#CCCCCC";
   ctx.fill();
   ctx.drawImage(userimage,x,y,w,h);
-  ctx.drawImage(cover,0,0,500,500);
+  ctx.drawImage(cover,0,0,600,600);
 
   var base64 = resize_canvas.toDataURL("image/png");
 
