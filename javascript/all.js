@@ -309,10 +309,6 @@ function resizeDragger(size,wrapper,value,upload)
     }
   }
 */
-      width = width*0.92;
-      height = height*0.92;
-      top = wrapper*0.045;
-      left = (wrapper-width)*0.5;
       
   $dragger
     .css('width',width+'px').css('height',height+'px')
